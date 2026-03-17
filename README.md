@@ -60,31 +60,35 @@ SELECT DISTINCT * FROM employees WHERE salary >= 120000; -- There are 3 high ear
 SELECT COUNT(DISTINCT employee_number) FROM employees WHERE salary >= 120000;
 ```
 ![tg1.1a](Images/tg1.1a.png)
+
 1b. Full details of employee_number 1005
 ```sql
 SELECT * FROM employees WHERE employee_number = 1005;
 SELECT DISTINCT * FROM employees WHERE employee_number = 1005;
 ```
+![tg1.1b](Images/tg1.1b.png)
 
 1c. IT Department
 ```sql
 SELECT * FROM employees WHERE department = 'IT';
 SELECT DISTINCT * FROM employees WHERE department = 'IT';
 ```
+![tg1.1c](Images/tg1.1c.png)
 
 ### Level 2: Smart Logic
-
 2a. Female employees in the finance department
 ```sql
 SELECT * FROM employees WHERE gender = 'Female' AND department = 'Finance';
 SELECT DISTINCT * FROM employees WHERE gender = 'Female' AND department = 'Finance'; 
 ```
+![tg1.2a](Images/tg1.2a.png)
 
 2b. Employees whose salaries fall between 70,000 and 90,000
 ```sql
 SELECT * FROM employees WHERE salary BETWEEN 70000 AND 90000;
 SELECT DISTINCT * FROM employees WHERE salary BETWEEN 70000 AND 90000;
 ```
+![tg1.2b](Images/tg1.2b.png)
 
 2c. Employees who are not currently Active
 ```sql
@@ -92,6 +96,7 @@ SELECT * FROM employees WHERE employment_status <> 'Active';
 SELECT DISTINCT * FROM employees WHERE employment_status <> 'Active';
 SELECT * FROM employees WHERE employment_status IN ('Resigned', 'Online');
 ```
+![tg1.2c](Images/tg1.2c.png)
 
 ### Level 3: Pattern Matching
 3a. Employees with the word “Manager” anywhere in their job title
@@ -99,21 +104,25 @@ SELECT * FROM employees WHERE employment_status IN ('Resigned', 'Online');
 SELECT * FROM employees WHERE job_title LIKE '%Manager';
 SELECT DISTINCT * FROM employees WHERE job_title LIKE '%Manager';
 ```
+![tg1.3a](Images/tg1.3a.png)
 
 3b. Employees in Sales, Marketing, or Operations
 ```sql
 SELECT * FROM employees WHERE department IN ('Sales', 'Marketing', 'Operations');
 SELECT DISTINCT * FROM employees WHERE department IN ('Sales', 'Marketing', 'Operations');
 ```
+![tg1.3b](Images/tg1.3b.png)
 
 c. Employees whose first_name starts with “A”
 ```sql
 SELECT * FROM employees WHERE first_name LIKE 'A%';
 SELECT DISTINCT * FROM employees WHERE first_name LIKE 'A%';
 ```
+![tg1.3c](Images/tg1.3c.png)
 
 4. Find all Male employees who: work in Sales OR IT, were hired after 2015-01-01, and earn more than 80,000
 ```sql
 SELECT DISTINCT * FROM employees WHERE gender = 'Male' AND hire_date > 2015-01-01 AND salary > 80000 AND department IN ('Sales', 'IT');
 ```
+![tg1.4](Images/tg1.4.png)
 
