@@ -59,7 +59,7 @@ SELECT * FROM employees WHERE salary >= 120000;
 SELECT DISTINCT * FROM employees WHERE salary >= 120000; -- There are 3 high earners
 SELECT COUNT(DISTINCT employee_number) FROM employees WHERE salary >= 120000;
 ```
-
+![tg1.1a](Images/tg1.1a.png)
 1b. Full details of employee_number 1005
 ```sql
 SELECT * FROM employees WHERE employee_number = 1005;
